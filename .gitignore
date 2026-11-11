@@ -1,0 +1,41 @@
+# ==============================================================================
+# Fichier .gitignore — Indique à Git les fichiers et dossiers à ne pas suivre
+# ==============================================================================
+
+# 1. Environnements virtuels Python (trop lourds et spécifiques à chaque machine)
+.venv/
+venv/
+env/
+
+# 2. Fichiers sensibles et secrets (ne JAMAIS publier sur GitHub)
+.env
+.env.local
+.env.*.local
+
+# 3. Fichiers compilés et caches Python générés automatiquement
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.pytest_cache/
+build/
+dist/
+
+# 4. Fichiers temporaires des notebooks Jupyter
+.ipynb_checkpoints/
+
+# 5. Données volumineuses et modèles entraînés (on garde uniquement les .gitkeep)
+data/raw/*
+!data/raw/.gitkeep
+data/processed/*
+!data/processed/.gitkeep
+models/*
+!models/.gitkeep
+
+# 6. Configuration locale des éditeurs et fichiers système
+.vscode/
+.idea/
+*.log
+Thumbs.db
+.DS_Store
+
